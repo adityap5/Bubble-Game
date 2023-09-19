@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Mooli', sans-serif;
+}
+body{
+    background-color:rgb(98, 156, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 80%;
+    width: 80%;
+    background-color:rgb(122, 219, 237);
+
+}
