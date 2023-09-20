@@ -46,6 +46,8 @@ overflow: hidden;
 .mbtm{
     height: calc(100% - 100px);
     width: 100%;
+    justify-content: center;
+    align-items: center;
     background-color:beige;
     display: flex;
     gap:10px;

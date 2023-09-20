@@ -21,6 +21,7 @@
 // })
 var timer = 60;
 var score = 0;
+var hitrn = 0;
 function bubble(){
     var clutter = "";
  console.log(val);
@@ -41,18 +42,26 @@ function runtimer(){
 
         }else{
             clearInterval(timerint);
+            document.querySelector(".mbtm").innerHTML =`<h1>GAME OVER </h1>`
         }
     },1000)
 }
 function getnewhit(){
-    var rn = Math.floor(Math.random()*10);
-    document.querySelector("#hitval").textContent = rn;
+    hitrn = Math.floor(Math.random()*10);
+    document.querySelector("#hitval").textContent = hitrn;
 }
-function scored(){
+function increasescored(){
 score += 10;
 document.querySelector("#scoreval").textContent= score;
 }
-
+document.querySelector(".mbtm").addEventListener("click",function(dtes){
+var u = Number(dtes.target.textContent);
+if (hitrn == u){
+    increasescored();
+    bubble();
+    getnewhit();
+}
+})
 
 
 bubble();
