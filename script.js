@@ -1,6 +1,7 @@
 var timer = 60;
 var score = 0;
 var hitrn = 0;
+
 function bubble(){
     var clutter = "";
  console.log(val);
@@ -37,6 +38,9 @@ document.querySelector(".mbtm").addEventListener("click",function(dtes){
 var u = Number(dtes.target.textContent);
 if (hitrn == u){
     increasescored();
+    bubble();
+    getnewhit();
+}else{
     bubble();
     getnewhit();
 }
