@@ -19,7 +19,8 @@
 //   crsr.style.top = dets.y + "px";
 
 // })
-
+var timer = 60;
+var score = 0;
 function bubble(){
     var clutter = "";
  console.log(val);
@@ -30,9 +31,6 @@ for (var i = 1; i<=115; i++) {
 
 document.querySelector(".mbtm").innerHTML = clutter;
 }
-bubble();
-
-var timer = 60;
 function runtimer(){
    var timerint= setInterval(function(){
         if (timer > 0) {
@@ -46,4 +44,17 @@ function runtimer(){
         }
     },1000)
 }
+function getnewhit(){
+    var rn = Math.floor(Math.random()*10);
+    document.querySelector("#hitval").textContent = rn;
+}
+function scored(){
+score += 10;
+document.querySelector("#scoreval").textContent= score;
+}
+
+
+
+bubble();
 runtimer();
+getnewhit();
