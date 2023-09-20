@@ -34,9 +34,16 @@ bubble();
 
 var timer = 60;
 function runtimer(){
-    setInterval(function(){
-timer --;
-document.querySelector("#timer").textContent= timer;
+   var timerint= setInterval(function(){
+        if (timer > 0) {
+           
+        
+            timer --;
+            document.querySelector("#timer").textContent= timer;
+
+        }else{
+            clearInterval(timerint);
+        }
     },1000)
 }
 runtimer();
