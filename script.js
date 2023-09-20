@@ -20,3 +20,23 @@
 
 // })
 
+function bubble(){
+    var clutter = "";
+ console.log(val);
+for (var i = 1; i<=115; i++) {
+ var val = Math.floor(Math.random()*10);
+ clutter += ` <div class="bubble">${val}</div>`
+}
+
+document.querySelector(".mbtm").innerHTML = clutter;
+}
+bubble();
+
+var timer = 60;
+function runtimer(){
+    setInterval(function(){
+timer --;
+document.querySelector("#timer").textContent= timer;
+    },1000)
+}
+runtimer();
